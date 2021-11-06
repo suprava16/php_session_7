@@ -16,7 +16,13 @@ $result=$con->query($sql);
 if($result->num_rows>0){
   $data=$result->fetch_assoc();
   $email=$data['email'];
+  $id=$data['id'];
   // echo "$email";
+
+  //start your session
+  session_start();
+  $_SESSION['email']=$email;
+  $_SESSION['id']=$id;
   header("location:home.php");
 
 }
