@@ -56,7 +56,7 @@ if($result->num_rows>0){
     <span><?php echo $salary;?></span>
   </div>
   <div>
-   <a href="update.php" name="edit">EDIT</a>
+   <a href="update.php">EDIT</a>
   </div>
 </body>
 </html>
