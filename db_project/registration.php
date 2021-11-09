@@ -8,6 +8,15 @@
 </head>
 <body>
   <h1>Registration form</h1>
+  <?php
+
+if(isset($_GET['msg'])){
+ if($_GET['msg']==="success"){
+   echo "<h3 style='color:red'>successfully data inserted</h3>";
+ }
+}
+ 
+ ?>
   <form action="insert_data.php" method="post">
     <input type="text" name="username" placeholder="enter username"><br/>
     <input type="email" name="email" placeholder="enter email"><br/>
@@ -18,5 +27,7 @@
     <input type="password" name="password" placeholder="enter password"><br/>
     <button type="submit" name="register">REGISTER</button>
   </form>
+
+
 </body>
 </html>

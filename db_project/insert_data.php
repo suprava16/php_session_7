@@ -18,7 +18,12 @@ if($con->connect_error){
 //inserting data into table
 $sql="insert into emp_table values(0,'$name','$email','$phone','$address','$designation',$salary,'$password')";
   if($con->query($sql)){
-    echo "successfully data inserted";
+//   ?>
+// <script>
+//   alert("successfully data inserted");
+// </script>
+// <?php
+header("location:registration.php?msg=success");
   }
   else{
     echo "something wrong .....try again";
