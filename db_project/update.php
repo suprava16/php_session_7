@@ -11,7 +11,7 @@ if(isset($_POST['update'])){
   $salary=$_POST['salary'];
 
 
-$sql="update emp_table set username='$empname',email='$email',phone='$phone',address='$address',designation='$designation',salary=$salary";
+$sql="update emp_table set username='$empname',email='$email',phone='$phone',address='$address',designation='$designation',salary=$salary where id=$_SESSION[id]";
 if($con->query($sql)){
   header("location:profile.php");
 }
